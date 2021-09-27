@@ -1,0 +1,180 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #F7F8F9;
+    box-sizing: border-box;
+}
+
+.cuadrado{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 160px;
+    align-items: center;
+    height: 600px;
+}
+
+.secciones{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10rem;
+    width: 25rem;
+}
+
+
+.classErrorNombre{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+.classErrorIngredientes{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+.classErrorValor{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.formulario select{
+    margin-bottom: 2rem;
+}
+
+.imagen-botones{
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titulo{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.titulo h1{
+    font-size: 30px;    
+    color: #9c3534;;
+}
+
+#preview{
+    width: 18rem;
+    height: 14rem;    
+}
+
+#preview img{
+    width: 100%;
+    height: 100%;
+}
+
+.multimedia{
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-color{
+    background: #9c3534;
+    color: #ffffff;
+    
+}
+
+.btn-cancelar{
+    background: white;
+    color: #9c3534;
+    border: 1px solid #9c3534;
+}
+
+.btn-color:hover{
+    background: #CA6F6E;
+    color: #ffffff;
+}
+
+.btn-cancelar:hover{
+    background: #EED8D7;
+    color: #9c3534;
+}
+
+
+
+@media (max-width: 700px) {
+    .secciones {
+      flex-direction: column;
+      align-items: center;
+    }
+    .formulario{
+        align-content: center;
+        margin: 0;
+    }
+    .multimedia{
+        align-items: center;
+    }
+    .botones{
+        margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+      .formulario{
+          width: 20rem;
+      }
+  }
+  @media (max-width: 320px) {
+    .formulario{
+        width: 18rem;
+    }
+}
+
+  #wrapper{
+      width: 100%;
+  }
+
+  .preload{
+      padding-top: 20px;
+      text-align: center;
+      display: none;
+  }
+
+  .activate-preload{
+      display: block;
+  }
+
+  #container-input{
+      width: 640px;
+      margin: 0 auto;
+      border: solid 1px #ccc;
+      position: relative;
+      overflow: hidden;
+  }
+  .form-control:focus{
+      border: solid rgba(156, 53, 52, 60%);
+      box-shadow: none;
+      background-color: #ffffff;
+  }
+
+
+#container-input .wrap-file #preview-images .thumbnail{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+}
