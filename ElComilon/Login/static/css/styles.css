@@ -1,9 +1,5 @@
-
 body{
     background-color: #f7f8f9;
-}
-a:hover{
-    color: #c4c4c4;
 }
 .Login{
     margin-top: 50px;
@@ -14,19 +10,32 @@ a:hover{
     border-radius: 6px;
 }
 .Tittle-h2 { 
+    color: blue;
     text-align: center;
 }
 .Recuperar_contraseña
 {
     display: block;
-    text-align: right;
+    float: right;
     color: brown;
     margin: 5px;
     text-decoration: none;
     font-size: 16px;
-    
 }
+.Recuperar_contraseña:hover
+{
+    display: block;
+    text-align: right;
+    color: brown;
+    margin: 5px;
+    font-size: 19px;
+    transition: .5s;
+    border-bottom: solid 1px;
 
+}
+a:hover{
+    color: #c4c4c4;
+}
 .Btn_login{
     width: 100%;
     margin-top: 10px;
@@ -38,10 +47,14 @@ a:hover{
     border: none;
 }
 .Btn_login:hover {
-    background-color: #f7F8F9; 
-    border: brown 5px;
-    color: white;
-    transition: .7s;
+    border: 100px;
+    color: #000;
+    border:brown solid 3px;
+
+    transition: .5s;
+    background-color: #f7f8f9;
+
+
 }
 .label{
     font-weight: bold;
@@ -59,6 +72,7 @@ a:hover{
 }
 .Registrarse{
     text-align: center;
+    font-size: 18px;
     margin: 5px;
 }
 .RegistrarseV2{
@@ -66,3 +80,37 @@ a:hover{
     font-size: 18px;
     text-decoration: none;
 }
+.RegistrarseV2:hover{
+    color: brown;
+    border-bottom: solid 1px;
+    transition: 1s;
+}
+
+/* validaciones */
+.inputvalido{
+    background-color: #FAE978; 
+    border: green 2px solid;
+    opacity: .4;
+    padding: .7rem;
+    color: #000
+
+  }
+  .inputinvalido{
+    background-color: #FAE978;
+    border: red 2px solid;
+    opacity: .4;
+    padding: .7rem;
+    color: #FAE971
+
+  }
+  .txtp{
+    display: none;
+}
+
+  .TxtERROR{
+      color: red;
+      display: inline;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+  }
