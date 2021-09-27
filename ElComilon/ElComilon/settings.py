@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'core',
     'shared',
     'Home',
+    'Login',
+    'RegisterPlatillo',
+    'Register',
 ]
 
 MIDDLEWARE = [
