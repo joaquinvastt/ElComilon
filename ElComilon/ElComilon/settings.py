@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Login',
     'RegisterPlatillo',
     'Register',
+    'registroProveedor',
 ]
 
 MIDDLEWARE = [

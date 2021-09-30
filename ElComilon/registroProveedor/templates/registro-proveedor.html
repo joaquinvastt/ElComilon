@@ -1,0 +1,71 @@
+{% extends "HeaderFooter/base.html"%}
+{% load static %}
+
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <link rel="stylesheet" href="{% static 'css/style-registro-proveedor.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="container main-content d-flex">
+        <form class="form-control form d-flex flex-column mb-4" method="post"  autocomplete="off">
+            <h3 class="text-center titulo">Registro de proveedor</h3>
+            {% csrf_token %}
+            <div class="row w-75 h-50">
+                <div class="col-lg-6">
+                    <input type="text" name="rutRestaurante" class="form-control input"
+                        placeholder="Rut del restaurante">
+                </div>
+                <div class="col-lg-6 col-ml-12">
+                    <input type="text" name="nombre" class="form-control input" placeholder="Nombre del restaurante">
+                </div>
+                <div class=" col-12 ">
+                    <input type="text" name="direccion" class="form-control input" placeholder="Dirección">
+                </div>
+                <div class="col-lg-6 col-ml-12">
+                    <select name="representante" id="representante" class="form-select input">
+                        <option value="">Representante</option>
+                        {% for c in representante %}
+                        <option value="{{c.0}}">{{c.1}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="col-lg-6 col-ml-12">
+                    <select name="tipo" id="tipo" class="form-select input" disabled>
+                        {% for c in tipo %}
+                        <option value="{{c.0}}">{{c.1}}</option>
+                        {% endfor%}
+                    </select>
+                </div>
+                <div class="col-lg-6 col-ml-12 mt-3">
+                    <input type="submit" value="Registrar" onclick="Mensaje()" class="btn btn-registrarProv w-100">
+                </div>
+            </div>
+            <div class="feedback animate__bounceIn" id="msg">
+                <div class="text-center fs-1">
+                   {{mensaje}}
+                </div>
+                <button class="btn btn-success button" onclick="MensajeOut()">Aceptar</button>
+            </div> 
+
+        </form>
+    </section>
+    <script src="{% static 'app/error.js' %}"></script>
+   
+
+   
+</body>
+</html>
+{% endblock %}
