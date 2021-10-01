@@ -21,7 +21,7 @@ def registroProveedor (request):
         else:
             data['mensaje'] = 'No se ha podido guardar'
 
-    # registrar('77.684.134-5','McDonald','chile','19.471.008-0',1)
+    #registrar('77.684.134-5','McDonald','chile','19.471.008-0',1)
     return render (request,'registro-proveedor.html',data)
 
 def listar_tipoRestaurante():
