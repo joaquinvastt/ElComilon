@@ -1,6 +1,10 @@
 body{
     background-color: #f7f8f9;
 }
+.Iniciar_sesion{
+    animation: bounce;
+  
+}
 .Login{
     margin-top: 50px;
 }
@@ -90,7 +94,6 @@ a:hover{
 .inputvalido{
     background-color: #FAE978; 
     border: green 2px solid;
-    opacity: .4;
     padding: .7rem;
     color: #000
 
@@ -98,19 +101,25 @@ a:hover{
   .inputinvalido{
     background-color: #FAE978;
     border: red 2px solid;
-    opacity: .4;
-    padding: .7rem;
-    color: #FAE971
+    padding: 5PX;
+    color: #000
 
   }
   .txtp{
     display: none;
 }
+.txtexito{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+}
 
-  .TxtERROR{
+.TxtERROR{
       color: red;
       display: inline;
       margin: 0;
       padding: 0;
       font-family: 'Times New Roman', Times, serif;
-  }
+}
