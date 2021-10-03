@@ -1,6 +1,5 @@
 {% extends "HeaderFooter/base.html"%}
 {% load static %}
-
 {% block content%}
 <!DOCTYPE html>
 <html lang="en">
@@ -18,14 +17,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{% static 'app/jquery.rut.chileno.js' %}"></script>
-
-    <link rel="stylesheet" href="{% static 'css/style-registro-proveedor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-trabajador.css' %}">
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $('.input_rut').rut();
         });
     </script>
-
     <title>Document</title>
 </head>
 
@@ -35,77 +32,62 @@
             <div class="col-lg-12">
                 <div class="card shadow-lg p3 mb-5 mt-5 bg-white">
                     <div class="card-header text-center">
-                        <h3>Registro Proveedor</h3>
+                        <h3>Registrar un trabajador</h3>
                     </div>
                     <div class="card-body">
-                        <form action="" class="needs-validation d-flex flex-column  justify-content-center"
+                        <form action="" autocomplete="off" class="needs-validation d-flex flex-column  justify-content-center"
                             method="POST" novalidate>
                             {% csrf_token %}
                             <div class="form-row">
-                                <div class="row mt-2">
-                                    <div class="col-lg-6 mb-4">
-                                        <input type="text" name="rutRestaurante" class="form-control input_rut" id="Rut"
-                                            placeholder="84.442.987-2" required>
-                                        <div class="valid-feedback"> </div>
-                                        <div class="invalid-feedback">Complete el campo</div>
-                                    </div>
-                                    <div class="col-lg-6 mb-4">
-                                        <input type="text" name="nombre" class="form-control" id="nombre" minlength="2"
-                                            placeholder="Nombre Restaurante" required>
-                                        <div class="valid-feedback"> </div>
-                                        <div class="invalid-feedback">Complete el campo</div>
-                                    </div>
-                                </div>
-                                <div class="row mb-5">
-                                    <div class="col-12">
-                                        <input type="text" name="direccion" class="form-control" id="direccion"
-                                            minlength="2" placeholder="Dirección" required>
-                                        <div class="valid-feedback"> </div>
-                                        <div class="invalid-feedback">Complete el campo</div>
-                                    </div>
-                                </div>
-                                <!-- <div class="row">
-                                    <div class="col-lg-6 mb-3">
-                                        <input type="text" name="proveedor" class="form-control" id="proveedor"
-                                            value="Proveedor" disabled>
-                                    </div>
-                                </div> -->
-                                <hr>
                                 <div class="row">
-                                    <h4 class="text-center mb-5">Registro Representante</h4>
                                     <div class="col-lg-6 mb-4">
-                                        <input type="text" name="representante" class="form-control input_rut" id="Rut"
-                                            placeholder="12.452.987-2" required>
+                                        <input type="text" name="rutTrabajador" class="form-control input_rut" id="rut"
+                                            placeholder="14.442.987-2" required>
                                         <div class="valid-feedback"> </div>
                                         <div class="invalid-feedback">Complete el campo</div>
                                     </div>
                                     <div class="col-lg-6 mb-4">
-                                        <input type="text" name="nombresRepresentante" class="form-control"
-                                            minlength="2" id="nombresRepresentante" placeholder="Nombres" required>
+                                        <input type="text" name="nombres" class="form-control" id="nombres"
+                                            placeholder="Nombres" required>
                                         <div class="valid-feedback"> </div>
                                         <div class="invalid-feedback">Complete el campo</div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 mb-4">
-                                        <input type="tel" name="telefono" class="form-control" id="teléfono"
-                                            placeholder="Telefono" pattern="[0-9]{9}" required>
+                                        <input type="text" name="apellidos" class="form-control" id="apellidos"
+                                            placeholder="Apellidos" required>
                                         <div class="valid-feedback"> </div>
                                         <div class="invalid-feedback">Complete el campo</div>
                                     </div>
                                     <div class="col-lg-6 mb-4">
-                                        <input type="text" name="apellidos" class="form-control" minlength="2"
-                                            id="apellidos" placeholder="Apellios" required>
+                                        <input type="date" name="fecha" class="form-control" id="fechaActual" required>
                                         <div class="valid-feedback"> </div>
                                         <div class="invalid-feedback">Complete el campo</div>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
-                                    <div class="col-12">
-                                        <input type="email" name="email" class="form-control" id="email" minlength="5"
-                                            placeholder="Correo"
-                                            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                                            required>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-4">
+                                        <input type="text" name="nombreU" class="form-control" id="nombreU"
+                                            placeholder="Nombre de usuario" required>
+                                        <div class="valid-feedback"> </div>
+                                        <div class="invalid-feedback">Complete el campo</div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <input type="password" name="contrasena" class="form-control" id="contrasena"
+                                            placeholder="Contraseña" required>
+                                        <div class="valid-feedback"> </div>
+                                        <div class="invalid-feedback">Complete el campo</div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-6 mb-4 ">
+                                      <select name="cargo" id="" class="form-select">
+                                          <option disabled>Cargo</option>
+                                          {% for c in cargo %}
+                                          <option value="{{c.0}}">{{c.1}}</option>
+                                          {% endfor %}
+                                      </select>
                                         <div class="valid-feedback"> </div>
                                         <div class="invalid-feedback">Complete el campo</div>
                                     </div>
@@ -122,9 +104,10 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{% static 'app/validacion.js' %}"></script>
+    <script src="{% static 'app/fecha.js' %}"></script>
 </body>
 
 </html>

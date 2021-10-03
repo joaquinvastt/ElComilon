@@ -2,6 +2,7 @@
     font-family: 'Roboto',sans-serif;
 }
 
+input[type=number] { -moz-appearance:textfield; }
 .form-control:focus{
     border: 1px solid #9C3534;
     box-shadow: none;
