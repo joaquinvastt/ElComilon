@@ -29,7 +29,9 @@
     <div class="container Iniciar_sesion">
         <div class="row justify-content-center align-items-center">
          <div class="col-md-6 container_login">
-            <form action="" class="mt-5 form row" id="Form_login">
+            <form action="" class="mt-5 form row" id="Form_login" method="POST">
+                {% csrf_token %}
+                {{ formulario.as.ul}}
                <div class="form-group">
                    <label for="" class=" label mt-3 col-12 form-label">Nombre de usuario</label>
                    <input id="nameUser" type="text" class="input col-12 mt-1 form-control">
