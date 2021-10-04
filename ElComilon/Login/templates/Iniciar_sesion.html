@@ -29,20 +29,16 @@
     <div class="container Iniciar_sesion">
         <div class="row justify-content-center align-items-center">
          <div class="col-md-6 container_login">
-            <form action="" class="mt-5 form row" id="Form_login" method="POST">
+            <form action="{% url "Login:login"%}" class="mt-5 form row" id="Form_login" method="POST">
                 {% csrf_token %}
-                {{ formulario.as.ul}}
-               <div class="form-group">
-                   <label for="" class=" label mt-3 col-12 form-label">Nombre de usuario</label>
-                   <input id="nameUser" type="text" class="input col-12 mt-1 form-control">
-                   <p id="txt_error" class="txtp">Error en el ingreso</p>
-                   <label for="" class=" label mt-3 col-12 form-label">Contraseña</label>
-                   <input id="passwordUser" type="password" class="input col-12 mt-1 form-control">
-                   <p id="txt_errorpass" class="txtp">Error en el ingreso</p>
-                   <a class="Recuperar_contraseña " href="">Recuperar Contraseña</a>
-                   <button id="btn-siguiente" class="Btn_login"> Siguiente </button>
-                   <p class="Registrarse"> ¿No tienes cuenta? <a href="/" class="RegistrarseV2">Regístrate</a></p>
-               </div>
+                <label for="" class=" label mt-3 col-12 form-label">Nombre de usuario</label>
+                <input id="nameUser" type="text" name = "nombreusuario"class="input col-12 mt-1 form-control">
+                <p id="txt_error" class="txtp">Error en el ingreso</p>
+                <label for="" class=" label mt-3 col-12 form-label">Contraseña</label>
+                <input id="passwordUser" type="password" name ="contrasena" class="input col-12 mt-1 form-control">
+                <p id="txt_errorpass" class="txtp">Error en el ingreso</p>
+                <a class="Recuperar_contraseña " href="">Recuperar Contraseña</a>
+                <button id="btn-siguiente" class="Btn_login"> Siguiente </button>
             </form>
          </div>
         </div>
