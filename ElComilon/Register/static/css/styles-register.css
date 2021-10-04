@@ -9,6 +9,11 @@
     width: 40%;
 }
 
+.input-sizes {
+    margin-left: 8%;
+    width: 85%;
+}
+
 .bgColor{
     background-color: #F7F8F9;
 }
@@ -30,7 +35,7 @@
 }
 
 
-@media (max-width:891px){
+@media (max-width:720px){
     .responsive-form{
        width: 90% !important;
        flex-direction: column;
