@@ -36,3 +36,58 @@
        flex-direction: column;
     }
 }
+
+/* Estilo de errores */
+
+.classErrorNomUsuario{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorNombres{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorApellidos{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+.classErrorDirreccion{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorRut{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorNumTelefono{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorMailUsuario{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorPassUser{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
+
+.classErrorRePassUser{
+    visibility: hidden;
+    color: #FF0000;
+    margin-left: 14px;
+}
