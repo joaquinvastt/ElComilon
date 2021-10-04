@@ -7,7 +7,7 @@ function validarCamposVacios(){
         errorNombre.style.visibility='visible';
     }
     else{
-        console.log("Ta wena la cosa");
+        errorNombre.style.visibility='hidden';
     }
 
     if (ingredientes.length==0){

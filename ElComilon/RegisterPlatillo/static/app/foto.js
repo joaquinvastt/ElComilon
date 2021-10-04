@@ -7,6 +7,7 @@ document.getElementById('file').onchange=function(e){
         image.src=reader.result;
         preview.innerHTML='';
         preview.append(image);
+        preview.style.display='block'
         /*let url = document.getElementById('file').value;
         console.log(url);*/
     }
