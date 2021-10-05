@@ -32,7 +32,6 @@ input[type=number] { -moz-appearance:textfield; }
     align-items:center;
     background-color:#9C3534;
     color:#fff;
-    padding:.7rem;
     width:50%;
 }
 .botonEnviar:hover{
