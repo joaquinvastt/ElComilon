@@ -9,11 +9,15 @@
         font-size: 18px;
         border-radius: 5px;
         border: none;
-    
-
 }
 .h1-reg-repartidor{
     text-align: center;
     margin-bottom: 20px;
     font-family: roboto;
+}
+#divinput{
+   margin-bottom: 15px !important;
+}
+.combobox{
+    margin-top: 15px;
 }

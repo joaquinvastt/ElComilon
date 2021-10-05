@@ -9,6 +9,9 @@ from core.models import *
 def RegisterRepatidor(request): 
 
 #     agregar_repartidor('203211058','Juan carlo', 'PEREZ PEREZ', '20-03-2021','Jcarlos', 'Jcarlos123','203453423')
+    data = {
+        'tipovehiculo':listar_categoria()
+    }
     return render(request, 'Registrorepartidor.html')
 
 def registroRep(request):
@@ -26,7 +29,8 @@ def registroRep(request):
         patente = request.POST.get('Patente')
         modelo = request.POST.get('Modelo')
         ano = request.POST.get('Ano')
-        color = request.POST.get('Color')   
+        color = request.POST.get('Color') 
+        tipovehiculo = request.POST.get('tipovehiculo') 
         #Agregar Repartidor
         repartidor.rutrepartidor = rutrepartidor
         repartidor.nombres = nombres
@@ -42,18 +46,20 @@ def registroRep(request):
         try:
             restaurante = Restaurante.objects.get(rutrestaurante = rutrestaurante )
             repartidor.rutrestaurante = restaurante
-            if repartidor.save() :
+            if repartidor.save():
                 print("Exito al ingresar repartidor")
                 render(request, 'index.html')
             else:
-                print("Error")
+                print("Error en ingresar ")
         except:
             print("Fallo")    
 
         try:
-            vehiculo = vehiculo.objects.get(rutrepartidor = rutrepartidor )
-            vehiculo.rutrepartidor = rutrepartidor
-            if vehiculo.save() :
+            Repartidorvehiculo = Repartidor.objects.get(rutrepartidor = rutrepartidor)
+            vehiculo.rutrepartidor = Repartidorvehiculo
+            idtipovehiculo = TipoVehiculo.objects.get(idtipovehiculo = tipovehiculo)
+            vehiculo.idtipovehiculo = idtipovehiculo
+            if vehiculo.save():
                 print("Exito al ingresa el vehiculo")
                 render(request, 'index.html')
             else:
@@ -63,7 +69,15 @@ def registroRep(request):
       
     return render(request, 'Registrorepartidor.html')  
  
-
+def listar_categoria():
+    django_cursor = connection.cursor()
+    cursor = django_cursor.connection.cursor()
+    out_cur = django_cursor.connection.cursor()
+    cursor.callproc("sp_listar_tipovehiculo" , [out_cur])
+    lista = []
+    for fila in out_cur:
+        lista.append(fila)
+        return lista
 # def agregar_repartidor(RUTREPARTIDOR, NOMBRES, APELLIDOS, FECHACONTRATO, USUARIO, CONTRASENA, RUTRESTAURANTE):
 #      django_cursor = connection.cursor()
 #      cursor = django_cursor.connection.cursor()    
