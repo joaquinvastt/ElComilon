@@ -110,7 +110,12 @@
                 <div class="row ">
                     <div class="col-md-6 col-sm-12 divinput">
                         <label for="" class="labelRepartidor">Tipo vehiculo</label>
-                        <input type="number" class="form-control input-repartidor" name="tipovehiculo">
+                        <select name="tipovehiculo" id="vehiculo" >
+                            <option value="0">Seleccione Tipo de Vehiculo</option>
+                            {% for vehiculo in vehiculos %}  
+                            <option  value="{{vehiculo.idtipovehiculo}}">{{vehiculo.descripcion}} </option>
+                            {% endfor %}
+                          </select>
                     </div>
                 </div>
                 

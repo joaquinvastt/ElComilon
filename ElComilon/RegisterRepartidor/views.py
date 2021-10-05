@@ -5,14 +5,14 @@ import cx_Oracle
 from core.models import *
 
 
-# Create your views here.
 def RegisterRepatidor(request): 
 
 #     agregar_repartidor('203211058','Juan carlo', 'PEREZ PEREZ', '20-03-2021','Jcarlos', 'Jcarlos123','203453423')
+    vehiculos = TipoVehiculo.objects.all()
     data = {
-        'tipovehiculo':listar_categoria()
-    }
-    return render(request, 'Registrorepartidor.html')
+          "vehiculos": vehiculos
+          }
+    return render(request, 'Registrorepartidor.html', data)
 
 def registroRep(request):
     print("Entrando al metodo")
@@ -43,6 +43,8 @@ def registroRep(request):
         vehiculo.modelo = modelo
         vehiculo.anio = ano
         vehiculo.color = color
+        #tipovehiculo
+    
         try:
             restaurante = Restaurante.objects.get(rutrestaurante = rutrestaurante )
             repartidor.rutrestaurante = restaurante
@@ -69,15 +71,15 @@ def registroRep(request):
       
     return render(request, 'Registrorepartidor.html')  
  
-def listar_categoria():
-    django_cursor = connection.cursor()
-    cursor = django_cursor.connection.cursor()
-    out_cur = django_cursor.connection.cursor()
-    cursor.callproc("sp_listar_tipovehiculo" , [out_cur])
-    lista = []
-    for fila in out_cur:
-        lista.append(fila)
-        return lista
+# def listar_categoria():
+#     django_cursor = connection.cursor()
+#     cursor = django_cursor.connection.cursor()
+#     out_cur = django_cursor.connection.cursor()
+#     cursor.callproc("sp_listar_tipovehiculo" , [out_cur])
+#     lista = []
+#     for fila in out_cur:
+#         lista.append(fila)
+#         return lista
 # def agregar_repartidor(RUTREPARTIDOR, NOMBRES, APELLIDOS, FECHACONTRATO, USUARIO, CONTRASENA, RUTRESTAURANTE):
 #      django_cursor = connection.cursor()
 #      cursor = django_cursor.connection.cursor()    

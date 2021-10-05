@@ -193,7 +193,9 @@ class TipoServicio(models.Model):
 class TipoVehiculo(models.Model):
     idtipovehiculo = models.IntegerField(primary_key=True)
     descripcion = models.CharField(max_length=30)
-
+    
+    def __str__(self):
+        return f'{self.idtipovehiculo}'
     class Meta:
         managed = False
         db_table = 'tipo_vehiculo'
