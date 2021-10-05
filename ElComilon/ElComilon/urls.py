@@ -24,6 +24,7 @@ from reclamo.views import reclamo
 from detallePedido.views import detallePedido
 from administracion.urls import url_patterns
 from Platillos.views import platillos
+from Pedido.views import pedido
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,4 +37,5 @@ urlpatterns = [
     path('administracion/', include(url_patterns)),
     path('detallePedido', detallePedido),
     path('platillos', platillos),
+    path('pedido', pedido)
 ]

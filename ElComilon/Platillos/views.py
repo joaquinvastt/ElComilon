@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.db import connection
-from django.core.files.base import ContentFile
 import base64
 
 # Create your views here.

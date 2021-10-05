@@ -18,6 +18,14 @@ body{
     height: 600px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
 .sombra{
     -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
@@ -75,7 +83,7 @@ body{
 }
 .titulo h1{
     font-size: 30px;    
-    color: #9c3534;;
+    color: #9c3534;
 }
 
 #preview{
@@ -111,6 +119,7 @@ body{
 .btn-aceptar{
     background: #9c3534;
     color: #ffffff;
+    transition: background .8s ease;
 }
 
 .btn-aceptar:hover{
