@@ -13,7 +13,7 @@ h1{
     --padding: 10px;    
     --bgcolor: #9C3534;
     --hovercolor: #B33B3D;
-    --width-collapsed: 50px;
+    --width-collapsed: 6rem;
 }
 
 body{
@@ -31,11 +31,11 @@ body{
 #sidemenu{
     background-color: var(--bgcolor);
     color: white;
-
     height: 100vh;
     left: 0;
     top: 0;
 }
+
 
 .contenedor{
     display: flex;
@@ -70,9 +70,6 @@ body{
     box-sizing: border-box;
 }
 
-#sidemenu #header #menu-btn:hover{
-    background-color: var(--hovercolor);
-}
 
 #sidemenu #header #menu-btn .btn-hamburger{
     background-color: white;
@@ -81,24 +78,10 @@ body{
     margin: 5px 0;
 }
 
-#sidemenu #menu-items{
-    overflow: hidden;
-}
 
-#sidemenu #menu-items .item{
-    width: var(--width);
-}
-
-#sidemenu #menu-items .title{
-    font-size: 20px;
-    vertical-align: middle;
-    overflow: hidden;
-    display: inline-block;
-}
-
-#sidemenu #menu-items .item a{
-    display: block;
-    margin-left: 10px;
+img{
+    width:50%;
+    margin:0 auto;
 }
 
 #sidemenu #menu-items .item a:hover{
@@ -113,7 +96,26 @@ body{
     width: var(--width);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+.opciones{
+    width:  100%;
+    height: 3rem;
+    font-size: 25px;
+    padding:0.5rem;
+}
 
+.opciones:hover{
+  color: #c4c4c4;
+}
+.iconos img{
+    transition:width .3s ease;
+}
+.iconos img:hover{
+    width: 70%;
+}
 .menu-expanded #header #title{
     display: inline-block;
     width: calc(100% - 50px);
@@ -164,7 +166,12 @@ body{
 .btn-item:hover{
     background-color: var(--hovercolor);
 }
-
+.item{
+    height:100;
+}
+.item a{
+    margin: 0;
+}
 
 
 /*Visibilidad*/
@@ -176,6 +183,32 @@ body{
     visibility: visible;
 }
 
+
+
+.sinIcono{
+    display: none;
+    margin: 0;
+}
+.conIcono{
+    display: block;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.menuprueba{
+     display: flex;
+ }
+.hamburguesa img{
+    width:100%;
+}
 
 
 .animated {

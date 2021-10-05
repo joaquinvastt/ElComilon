@@ -47,9 +47,8 @@ input[type=number] { -moz-appearance:textfield; }
     box-shadow: none;
     background-color: #ffffff;
 }
-
-
-
-
+.titulo{
+    color:#9C3534;
+}
 
 
