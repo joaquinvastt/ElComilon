@@ -113,7 +113,11 @@ class Repartidor(models.Model):
     contrasena = models.CharField(max_length=20)
     rutrestaurante = models.ForeignKey('Restaurante', models.DO_NOTHING, db_column='rutrestaurante')
 
+    def __str__(self):
+        return self.nombres + ' ' + self.apellidos
+
     class Meta:
+        verbose_name_plural = "Repartidores"
         managed = False
         db_table = 'repartidor'
 
@@ -216,7 +220,7 @@ class Vehiculo(models.Model):
     anio = models.IntegerField()
     color = models.CharField(max_length=20)
     rutrepartidor = models.ForeignKey(Repartidor, models.DO_NOTHING, db_column='rutrepartidor')
-    idtipovehiculo = models.ForeignKey(TipoVehiculo, models.DO_NOTHING, db_column='idtipovehiculo')
+    idtipovehiculo = models.ForeignKey(TipoVehiculo, models.DO_NOTHING, db_column='idtipovehiculo ')
 
     class Meta:
         managed = False

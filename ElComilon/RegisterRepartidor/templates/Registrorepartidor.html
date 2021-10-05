@@ -29,7 +29,7 @@
   
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6 container_login">
-           <form action="/regin" class="mt-5 form row" id="Form_login" method="POST">
+           <form action="/regin" class="mt-5 form row" id="Form_login" method="POST" >
             {% csrf_token %}
               <div class="form-group">
                 <div class="row">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <label for="" class="labelRepartidor">Fecha contrato</label>
-                        <input type="text" class="form-control input-repartidor" name="Fechacontrato">
+                        <input type="date" class="form-control input-repartidor" name="Fechacontrato">
                     </div>
                     
                 </div>
