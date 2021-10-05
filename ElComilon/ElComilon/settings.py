@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'registroProveedor',
     'RegEmpConv',
     'reclamo',
+    'Platillos',
+    'detallePedido',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xe',
         'USER': 'COMILONBD',
-        'PASSWORD': '1234',
+        'PASSWORD': '123',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',

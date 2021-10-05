@@ -21,8 +21,9 @@ from RegisterPlatillo.views import registroPlatillo
 from Register.views import register
 from registroProveedor.views import registroProveedor   
 from reclamo.views import reclamo
+from detallePedido.views import detallePedido
 from administracion.urls import url_patterns
-
+from Platillos.views import platillos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +34,6 @@ urlpatterns = [
     path('registroProveedor',registroProveedor),
     path('reclamo',reclamo),
     path('administracion/', include(url_patterns)),
+    path('detallePedido', detallePedido),
+    path('platillos', platillos),
 ]
