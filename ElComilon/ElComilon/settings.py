@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'Login',
     'RegisterPlatillo',
     'Register',
+    'RegisterRepartidor',
+    'PerfilUsuario'
+    
 ]
 
 MIDDLEWARE = [

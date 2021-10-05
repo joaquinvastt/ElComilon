@@ -33,8 +33,9 @@ def login (request):
         contrasena = request.POST['contrasena']
         try:
             cliente = Cliente.objects.get(nombreusuario=nombreusuario,contrasena=contrasena)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('perfil')
         except:
-            print("No existe el usuario")  
+            print("No existe el usuario") 
+            return render(request,'iniciar_sesion.html', {'mensaje':'Usuario ingresado no es valido'}) 
     return render(request,'iniciar_sesion.html') 
         

@@ -19,12 +19,21 @@ from Home.views import inicio
 from Login.views import login
 from RegisterPlatillo.views import registroPlatillo
 from Register.views import register
+from RegisterRepartidor.views import RegisterRepatidor,registroRep
+from PerfilUsuario.views import Usertemplate
+
+
+
+# from RegisterRepartidor.views import 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio),
-    path('',include('Login.urls')),
+    path('login/',include('Login.urls')),
     path('registroPlatillo',registroPlatillo),
-    path('registro',register)
+    path('registro',register),
+    path('registerrepartidor',RegisterRepatidor ),
+    path('regin', registroRep),
+    path('perfil', Usertemplate)
 
 ]

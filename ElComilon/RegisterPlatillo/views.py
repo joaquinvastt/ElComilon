@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def registroPlatillo (reques):
-    return render(reques,'registrarPlatillo.html')
+def registroPlatillo (request):
+    return render(request,'registrarPlatillo.html')

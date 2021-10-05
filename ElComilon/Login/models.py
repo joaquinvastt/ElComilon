@@ -1,5 +1,8 @@
 from django.db import models
 from django.db.models.fields import related
+
+
+
 class Cliente(models.Model):
     rutcliente = models.CharField(primary_key=True, max_length=12)
     nombreusuario = models.CharField(max_length=15)

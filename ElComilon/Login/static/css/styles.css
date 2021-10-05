@@ -19,8 +19,8 @@ body{
 }
 .Recuperar_contraseña
 {
-    display: block;
-    float: right;
+    display: inline;
+    text-align: right;
     color: brown;
     margin: 5px;
     text-decoration: none;
@@ -36,6 +36,11 @@ body{
     transition: .5s;
     border-bottom: solid 1px;
 
+}
+.mensajeError{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px;
 }
 a:hover{
     color: #c4c4c4;

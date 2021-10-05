@@ -35,15 +35,15 @@ class DetallePedido(models.Model):
         db_table = 'detalle_pedido'
 
 
-# class EmpresaConvenio(models.Model):
-#     rutempresaconvenio = models.CharField(primary_key=True, max_length=12)
-#     nombre = models.CharField(max_length=20)
-#     razonsocial = models.CharField(max_length=30)
-#     fechaconvenio = models.DateField()
+class EmpresaConvenio(models.Model):
+    rutempresaconvenio = models.CharField(primary_key=True, max_length=12)
+    nombre = models.CharField(max_length=20)
+    razonsocial = models.CharField(max_length=30)
+    fechaconvenio = models.DateField()
 
-#     class Meta:
-#         managed = False
-#         db_table = 'empresa_convenio'
+    class Meta:
+        managed = False
+        db_table = 'empresa_convenio'
 
 
 class EstadoPedido(models.Model):
@@ -159,13 +159,13 @@ class Restaurante(models.Model):
         db_table = 'restaurante'
 
 
-# class TipoCliente(models.Model):
-#     idtipocliente = models.IntegerField(primary_key=True)
-#     descripcion = models.CharField(max_length=30)
+class TipoCliente(models.Model):
+    idtipocliente = models.IntegerField(primary_key=True)
+    descripcion = models.CharField(max_length=30)
 
-#     class Meta:
-#         managed = False
-#         db_table = 'tipo_cliente'
+    class Meta:
+        managed = False
+        db_table = 'tipo_cliente'
 
 
 class TipoRestaurante(models.Model):

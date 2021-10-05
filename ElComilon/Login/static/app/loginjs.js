@@ -1,15 +1,39 @@
-// let Botonsiguiente = document.getElementById("btn-siguiente")
-// const inputNombreusuario = document.getElementById("nameUser")
-// const inputPassword = document.getElementById("passwordUser")
-// const FormLogin = document.getElementById('Form_login')
-// const txt_error = document.getElementById('txt_error')
-// const txt_errorpass = document.getElementById('txt_errorpass')
-// const expresiones = {
-// 	usuario: /^[a-z]+$/, // Letras, numeros, guion y guion_bajo
-// 	password: /^.{4,12}$/, // 4 a 12 digitos.
+
+const inputNombreusuario = document.getElementById("nameUser")
+const inputPassword = document.getElementById("passwordUser")
+const txt_error = document.getElementById('txt_error')
+const txt_errorpass = document.getElementById('txt_errorpass')
+const expresiones = {
+	usuario: /^[a-z]+$/, // Letras, numeros, guion y guion_bajo
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+}
+// function getCookie(name) {
+//     let cookieValue = null;
+//     if (document.cookie && document.cookie !== '') {
+//         const cookies = document.cookie.split(';');
+//         for (let i = 0; i < cookies.length; i++) {
+//             const cookie = cookies[i].trim();
+//             // Does this cookie string begin with the name we want?
+//             if (cookie.substring(0, name.length + 1) === (name + '=')) {
+//                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+//                 break;
+//             }
+//         }
+//     }
+//     return cookieValue;
 // }
-// const Validarcampo = (e) =>
-// {
+// const Guardardatos = () => { 
+//     const FormLogin = new FormData(document.getElementById('Form_login'))
+//     fetch ("/",{
+//         method: "POST",
+//         body: FormLogin,
+//         headers: {
+//             "X-CSRFToken": getCookie('csrftoken'),
+//         }
+//     })
+// }
+
+// const Validarcampo = () =>{
 // if(inputNombreusuario.value.length < 8){
 //     inputNombreusuario.classList.add('inputinvalido')
 //     txt_error.classList.remove('txtp')
@@ -25,7 +49,7 @@
 //       inputNombreusuario.classList.remove('inputinvalido')
 //       inputNombreusuario.classList.add('valido')
      
-//     }
+//     }   
 //  if(inputPassword.value.length < 8) {
 //   inputPassword.classList.add('inputinvalido')
 //     txt_errorpass.classList.add('TxtERROR')
@@ -41,31 +65,7 @@
 //       inputPassword.classList.add('valido')
 //       return
 //     }
-// /*
-//    else {
-//     inputNombreusuario.classList.replace('inputinvalido','inputvalido')
-//     txt_error.classList.remove('TxtERROR')
-//     txt_error.classList.add('txtp')
-
-//     inputPassword.classList.replace('inputinvalido','inputvalido')
-//     txt_errorpass.classList.remove('TxtERROR')
-//     txt_errorpass.classList.add('txtp')
-//      console.log("EXito")
-//      return
-//    }
-
-//   return
-//   */
 // }
-
-// FormLogin.addEventListener("submit",e => {
-//   e.preventDefault()
-//   console.log("Enviando info")
-//   Validarcampo(e)
-// }
-// )
-
-
 
 
 
