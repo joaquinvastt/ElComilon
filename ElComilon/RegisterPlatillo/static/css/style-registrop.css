@@ -18,6 +18,14 @@ body{
     height: 600px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
 .sombra{
     -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
@@ -27,7 +35,6 @@ body{
     margin-bottom: 2rem;
     border-radius: .4rem;
 }
-
 
 .formulario{
     display: flex;
@@ -45,22 +52,21 @@ body{
 .campos{
     width: 25rem
 }
+
+.inputs{
+    margin-bottom: 3rem;
+}
+
+.form-label{
+    margin: 0;
+}
+
 .itemsDerecha{
     display: flex;
     flex-direction: column;
     height: 100%;
     width: auto;
     align-items: center;
-}
-
-
-.classError{
-    visibility: hidden;
-    color: #FF0000;
-}
-
-.formulario select{
-    margin-bottom: 2rem;
 }
 
 .imagen-botones{
@@ -77,7 +83,7 @@ body{
 }
 .titulo h1{
     font-size: 30px;    
-    color: #9c3534;;
+    color: #9c3534;
 }
 
 #preview{
@@ -102,37 +108,31 @@ body{
 .botones{
     display: flex;
     justify-content: center;
-    gap: 10.7rem;
     align-items:stretch;
 }
 
 .botones button{
-    width: 10rem;
+    width: 20rem;
+    text-align: center;
 }
 
-.btn-color{
+.btn-aceptar{
     background: #9c3534;
     color: #ffffff;
-    display: flex;
-    
+    transition: background .8s ease;
 }
 
-.btn-cancelar{
-    background: white;
+.btn-aceptar:hover{
+    background: #ffffff;
     color: #9c3534;
     border: 1px solid #9c3534;
 }
 
-.btn-color:hover{
-    background: #CA6F6E;
-    color: #ffffff;
+.btn-aceptar:focus{
+    border: 1.5px solid #9c3534;
+    box-shadow: none;
+    background-color: #ffffff;
 }
-
-.btn-cancelar:hover{
-    background: #EED8D7;
-    color: #9c3534;
-}
-
 
 
 @media (max-width: 768px) {
@@ -229,7 +229,7 @@ body{
       overflow: hidden;
   }
   .inputfocus:focus{
-      border: 1.5px solid rgba(156, 53, 52, 60%);
+      border: 1.5px solid #9c3534;
       box-shadow: none;
       background-color: #ffffff;
   }

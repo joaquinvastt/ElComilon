@@ -21,16 +21,29 @@ from RegisterPlatillo.views import registroPlatillo
 from Register.views import register
 from registroProveedor.views import registroProveedor   
 from reclamo.views import reclamo
+from Home.views import quienesSomos
 from administracion.urls import url_patterns
-
+from PerfilUsuario.views import Usertemplate
+from RegisterRepartidor.views import registroRep,RegisterRepatidor
+from Pedido.views import pedido
+from Platillos.views import platillos
+from detallePedido.views import detallePedido
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',inicio),
-    path('login',login),
+    path('login/',include('Login.urls')),
     path('registroPlatillo',registroPlatillo),
     path('registro',register),  
     path('registroProveedor',registroProveedor),
     path('reclamo',reclamo),
-    path('administracion/', include(url_patterns)),
+    path('quienesSomos', quienesSomos),
+    path('perfil', Usertemplate),
+    path('registerrepartidor', RegisterRepatidor),
+    path('regin', registroRep),
+    path('pedido', pedido),
+    path('platillos', platillos),
+    path('detallePedido', detallePedido),
+    path('administracion/', include(url_patterns))
+
 ]

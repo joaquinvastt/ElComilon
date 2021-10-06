@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'registroProveedor',
     'RegEmpConv',
     'reclamo',
+    'RegisterRepartidor',
+    'Pedido',
+    'Platillos',
+    'detallePedido'
 ]
 
 MIDDLEWARE = [

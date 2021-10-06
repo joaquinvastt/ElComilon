@@ -1,26 +1,19 @@
-function validarCamposVacios(){
-    var nombre = document.getElementById("Nombre").value;
-    var ingredientes = document.getElementById("Ingredientes").value;
-    var valor = document.getElementById("Valor").value;
-
-    if (nombre.length==0){
-        errorNombre.style.visibility='visible';
-    }
-    else{
-        console.log("Ta wena la cosa");
-    }
-
-    if (ingredientes.length==0){
-        errorIngredientes.style.visibility='visible';
-    }
-    else{
-        console.log("Ta wena la cosa");
-    }
-
-    if (valor.length==0){
-        errorValor.style.visibility='visible';
-    }
-    else{
-        console.log("Ta wena la cosa");
-    }
-}
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
